@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 860" width="1200" height="860" role="img" aria-label="Placeholder diploma document">
+  <rect width="1200" height="860" fill="#FBF8F2"/>
+  <rect x="40" y="40" width="1120" height="780" fill="none" stroke="#2B2721" stroke-width="4"/>
+  <rect x="56" y="56" width="1088" height="748" fill="none" stroke="rgba(43,39,33,0.35)" stroke-width="2"/>
+
+  <g stroke="rgba(43,39,33,0.45)" stroke-width="3" fill="none" stroke-linecap="round">
+    <path d="M180 210 h840 M180 250 h640"/>
+  </g>
+
+  <g font-family="Georgia, 'Times New Roman', serif" fill="#2B2721" text-anchor="middle">
+    <text x="600" y="330" font-size="34" letter-spacing="8">UNIVERSITY OF NORTHFIELD</text>
+    <text x="600" y="440" font-size="72" font-style="italic">Master of Arts</text>
+    <text x="600" y="510" font-size="30" letter-spacing="6" fill="rgba(43,39,33,0.75)">Language Education · 2011</text>
+    <text x="420" y="690" font-size="26" font-style="italic" fill="rgba(43,39,33,0.7)">Dean of Faculty</text>
+  </g>
+
+  <!-- seal -->
+  <g transform="translate(880 640)">
+    <circle r="76" fill="#F4EEE3" stroke="#A67B5B" stroke-width="5"/>
+    <circle r="58" fill="none" stroke="#A67B5B" stroke-width="3"/>
+    <path d="M-30 0 h60 M0 -30 v60" stroke="#4A5C40" stroke-width="4" stroke-linecap="round"/>
+    <path d="M-40 66 l-16 76 l40 -24 l40 24 l-16 -76" fill="#E6DCCB" stroke="#A67B5B" stroke-width="4"/>
+  </g>
+
+  <path d="M200 660 c50 -40 120 -44 170 -12" fill="none" stroke="#4A5C40" stroke-width="5" stroke-linecap="round"/>
+  <path d="M180 700 h260" stroke="rgba(43,39,33,0.4)" stroke-width="3"/>
+</svg>

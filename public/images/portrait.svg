@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 900" width="720" height="900" role="img" aria-label="Illustrated portrait placeholder">
+  <defs>
+    <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.2" fill="rgba(43,39,33,0.10)"/>
+    </pattern>
+  </defs>
+
+  <rect width="720" height="900" fill="#F4EEE3"/>
+  <rect width="720" height="900" fill="url(#dots)"/>
+  <rect x="34" y="34" width="652" height="832" fill="none" stroke="rgba(43,39,33,0.18)" stroke-width="2"/>
+
+  <!-- botanicals -->
+  <g fill="none" stroke="#6B7F5E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.75">
+    <path d="M120 866 C126 760 132 686 150 604"/>
+    <path d="M150 604 C110 600 84 574 78 534 C120 534 148 560 150 602 Z"/>
+    <path d="M138 672 C176 664 200 636 206 598 C166 600 142 628 138 668 Z"/>
+    <path d="M600 866 C596 764 590 690 574 612"/>
+    <path d="M574 612 C612 606 636 578 640 540 C600 542 576 570 574 610 Z"/>
+    <path d="M586 682 C550 674 528 648 524 612 C562 614 584 640 586 678 Z"/>
+  </g>
+
+  <!-- figure -->
+  <g stroke="#2B2721" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M176 900 C192 716 274 638 360 638 C446 638 528 716 544 900 Z" fill="#E6DCCB"/>
+    <path d="M326 566 h68 l6 82 h-80 Z" fill="#E6DCCB"/>
+    <path d="M326 648 L360 704 L394 648" fill="none"/>
+    <ellipse cx="360" cy="468" rx="97" ry="116" fill="#FBF8F2"/>
+    <path d="M262 470 C254 356 300 300 360 300 C422 300 466 356 458 470 C446 414 420 384 360 384 C300 384 274 414 262 470 Z" fill="#2B2721"/>
+    <path d="M360 300 C344 268 350 244 372 236 C396 228 414 246 410 268 C406 290 386 304 360 300 Z" fill="#2B2721"/>
+    <path d="M316 466 q16 16 32 0" fill="none"/>
+    <path d="M372 466 q16 16 32 0" fill="none"/>
+    <path d="M338 522 q22 20 44 0" fill="none"/>
+    <path d="M240 760 C280 792 330 806 360 806 C390 806 440 792 480 760" fill="none" stroke-width="2.4" opacity="0.6"/>
+  </g>
+
+  <!-- paper accents -->
+  <g fill="rgba(166,123,91,0.45)">
+    <rect x="86" y="120" width="120" height="30" transform="rotate(-6 146 135)"/>
+  </g>
+  <path d="M540 118 c30 -14 66 -10 96 6" fill="none" stroke="#A67B5B" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+</svg>

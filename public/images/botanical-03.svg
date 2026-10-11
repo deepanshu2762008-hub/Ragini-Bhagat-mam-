@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="Botanical line drawing of a wildflower sprig">
+  <rect width="800" height="600" fill="#FBF8F2"/>
+  <rect x="26" y="26" width="748" height="548" fill="none" stroke="rgba(43,39,33,0.16)" stroke-width="2"/>
+
+  <g fill="none" stroke="#4A5C40" stroke-width="4" stroke-linecap="round">
+    <path d="M400 544 C398 452 404 372 424 296 C440 236 466 186 498 148"/>
+    <path d="M414 348 C364 344 328 314 318 270 C364 270 402 300 414 344 Z"/>
+    <path d="M430 280 C470 268 496 236 500 198 C458 204 432 236 430 276 Z"/>
+    <path d="M406 436 C362 434 330 410 322 374 C362 374 396 396 406 432 Z"/>
+  </g>
+
+  <g fill="none" stroke="#A67B5B" stroke-width="4" stroke-linecap="round">
+    <circle cx="500" cy="130" r="26"/>
+    <path d="M500 86 v-16 M500 174 v16 M456 130 h-16 M544 130 h16 M470 100 l-12 -12 M530 100 l12 -12 M470 160 l-12 12 M530 160 l12 12"/>
+    <circle cx="330" cy="234" r="16"/>
+    <path d="M330 202 v-12 M330 266 v12 M298 234 h-12 M362 234 h12"/>
+    <circle cx="576" cy="248" r="14"/>
+    <path d="M576 218 v-10 M576 278 v10 M546 248 h-10 M606 248 h10"/>
+  </g>
+
+  <g stroke="rgba(43,39,33,0.3)" stroke-width="2" fill="none">
+    <path d="M96 480 h140 M96 508 h96"/>
+  </g>
+</svg>

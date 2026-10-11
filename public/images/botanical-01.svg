@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="Botanical line drawing of a pressed leaf">
+  <rect width="800" height="600" fill="#FBF8F2"/>
+  <rect x="26" y="26" width="748" height="548" fill="none" stroke="rgba(43,39,33,0.16)" stroke-width="2"/>
+
+  <g fill="none" stroke="#4A5C40" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M400 540 C396 430 394 330 402 224"/>
+    <path d="M402 232 C318 224 258 172 244 96 C330 100 396 148 402 228 Z"/>
+    <path d="M398 330 C474 318 530 264 544 190 C462 194 406 246 398 326 Z"/>
+    <path d="M400 430 C344 424 302 392 288 344 C344 346 388 378 400 428 Z"/>
+  </g>
+  <g fill="none" stroke="#6B7F5E" stroke-width="2.4" opacity="0.7">
+    <path d="M402 228 C360 190 318 150 268 116"/>
+    <path d="M398 326 C438 288 484 246 526 214"/>
+    <path d="M400 428 C372 404 340 380 304 362"/>
+  </g>
+
+  <g stroke="rgba(43,39,33,0.35)" stroke-width="2" fill="none">
+    <path d="M120 120 h96 M120 148 h64"/>
+  </g>
+  <rect x="556" y="460" width="128" height="30" fill="rgba(230,220,203,0.85)" transform="rotate(-4 620 475)"/>
+</svg>

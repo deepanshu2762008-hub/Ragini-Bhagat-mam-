@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="Abstract reading corner with books and a chair">
+  <rect width="800" height="600" fill="#FBF8F2"/>
+  <rect x="26" y="26" width="748" height="548" fill="none" stroke="rgba(43,39,33,0.16)" stroke-width="2"/>
+
+  <!-- chair -->
+  <g stroke="#2B2721" stroke-width="5" fill="none" stroke-linecap="round">
+    <path d="M470 480 v-160 q0 -50 -46 -50 h-90"/>
+    <path d="M334 480 h170"/>
+    <path d="M348 480 v54 M490 480 v54"/>
+    <path d="M470 336 q60 -6 74 -56"/>
+  </g>
+  <path d="M356 276 q0 -44 44 -44 h64 v70 h-108 Z" fill="#E6DCCB" stroke="#2B2721" stroke-width="4"/>
+
+  <!-- book stack -->
+  <g stroke="#2B2721" stroke-width="4" stroke-linejoin="round">
+    <rect x="96" y="440" width="196" height="42" fill="#E6DCCB"/>
+    <rect x="110" y="398" width="176" height="42" fill="#F4EEE3"/>
+    <rect x="102" y="356" width="192" height="42" fill="#FBF8F2"/>
+    <path d="M120 461 h60 M126 419 h54 M118 377 h58" stroke="rgba(43,39,33,0.4)" stroke-width="3"/>
+  </g>
+
+  <!-- steam / lamp -->
+  <g fill="none" stroke="#6B7F5E" stroke-width="3.4" stroke-linecap="round">
+    <path d="M150 330 c-10 -18 6 -26 -2 -44"/>
+    <path d="M196 330 c-10 -18 6 -26 -2 -44"/>
+  </g>
+
+  <g fill="rgba(166,123,91,0.5)">
+    <rect x="592" y="120" width="116" height="28" transform="rotate(5 650 134)"/>
+  </g>
+  <path d="M600 470 c40 -30 92 -34 136 -12" fill="none" stroke="#A67B5B" stroke-width="3.4" stroke-linecap="round"/>
+</svg>

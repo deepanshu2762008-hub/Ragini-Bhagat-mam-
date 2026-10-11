@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 860" width="1200" height="860" role="img" aria-label="Placeholder practice certificate">
+  <rect width="1200" height="860" fill="#FBF8F2"/>
+  <rect x="40" y="40" width="1120" height="780" fill="none" stroke="#A67B5B" stroke-width="4"/>
+  <rect x="56" y="56" width="1088" height="748" fill="none" stroke="rgba(166,123,91,0.45)" stroke-width="2"/>
+
+  <g fill="rgba(230,220,203,0.6)">
+    <path d="M56 56 h300 l-300 300 Z"/>
+    <path d="M1144 804 h-300 l300 -300 Z"/>
+  </g>
+
+  <g font-family="Georgia, 'Times New Roman', serif" fill="#2B2721" text-anchor="middle">
+    <text x="600" y="230" font-size="30" letter-spacing="10">CERTIFICATE OF PRACTICE</text>
+    <text x="600" y="370" font-size="58" font-style="italic">Trauma-Informed</text>
+    <text x="600" y="450" font-size="58" font-style="italic">Practice</text>
+    <text x="600" y="560" font-size="27" letter-spacing="5" fill="rgba(43,39,33,0.72)">Centre for Student Wellbeing · 2021</text>
+    <text x="760" y="700" font-size="25" font-style="italic" fill="rgba(43,39,33,0.7)">Assessment Chair</text>
+  </g>
+
+  <g transform="translate(400 650)">
+    <circle r="70" fill="#F4EEE3" stroke="#A67B5B" stroke-width="5"/>
+    <circle r="52" fill="none" stroke="#A67B5B" stroke-width="3" stroke-dasharray="10 8"/>
+    <path d="M-26 -8 h52 M-26 8 h52" stroke="#4A5C40" stroke-width="4" stroke-linecap="round"/>
+    <path d="M-36 62 l-14 68 l34 -20 l34 20 l-14 -68" fill="#E6DCCB" stroke="#A67B5B" stroke-width="4"/>
+  </g>
+
+  <path d="M700 720 c44 -34 106 -38 150 -10" fill="none" stroke="#4A5C40" stroke-width="5" stroke-linecap="round"/>
+</svg>

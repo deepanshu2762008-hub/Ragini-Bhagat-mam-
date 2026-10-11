@@ -1,0 +1,711 @@
+/* ==========================================================================
+   SECTIONS 1–4 — Cover · About · Journey · Teaching Philosophy
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1 · Cover
+   -------------------------------------------------------------------------- */
+
+.cover {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: clip;
+  perspective: 1400px;
+  background: var(--color-paper);
+  padding-top: calc(var(--nav-offset) + 8px);
+}
+
+.cover__noise {
+  position: absolute;
+  inset: -90px;
+  pointer-events: none;
+  opacity: 0.55;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='c'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='linear' slope='0.07'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23c)'/%3E%3C/svg%3E");
+  animation: cover-drift 54s linear infinite alternate;
+}
+
+@keyframes cover-drift {
+  from {
+    transform: translate3d(0, 0, 0) scale(1.05);
+  }
+  to {
+    transform: translate3d(-34px, -26px, 0) scale(1.09);
+  }
+}
+
+.cover[data-active='false'] .cover__noise,
+.cover[data-active='false'] .cover__cta-arrow {
+  animation-play-state: paused;
+}
+
+.cover__stage {
+  position: relative;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.cover__inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1100px;
+  padding-inline: var(--gutter);
+  text-align: center;
+  will-change: transform;
+}
+
+.cover__kicker {
+  font-family: var(--hand-font);
+  font-size: clamp(1.3rem, 1rem + 1vw, 1.9rem);
+  color: var(--color-green-deep);
+}
+
+.cover__title {
+  font-size: var(--title-hero);
+  line-height: 0.94;
+  margin-top: 6px;
+}
+
+.cover__tagline {
+  margin-top: clamp(14px, 3vh, 26px);
+  font-size: clamp(0.95rem, 0.85rem + 0.4vw, 1.15rem);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(43, 39, 33, 0.74);
+}
+
+.cover__intro {
+  max-width: 48ch;
+  margin: clamp(16px, 3vh, 28px) auto 0;
+  color: rgba(43, 39, 33, 0.84);
+}
+
+.cover__cta {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  margin-top: clamp(26px, 5vh, 52px);
+  padding: 10px 8px;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  font-size: 0.8rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--color-green-deep);
+  transition: color var(--dur-1) var(--ease), transform var(--dur-1) var(--ease);
+}
+
+.cover__cta::after {
+  content: '';
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  bottom: 4px;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0.3);
+  transform-origin: center;
+  transition: transform var(--dur-1) var(--ease);
+}
+
+.cover__cta:hover {
+  color: var(--color-ink);
+  transform: translateY(2px);
+}
+
+.cover__cta:hover::after,
+.cover__cta:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.cover__cta:active {
+  transform: translateY(3px);
+}
+
+.cover__cta-arrow {
+  display: inline-block;
+  animation: cta-nudge 2.6s var(--ease) infinite;
+}
+
+@keyframes cta-nudge {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+/* Floating desk ephemera */
+.cover__decor {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.cover__decor--leaf {
+  top: 9%;
+  left: 5%;
+  color: rgba(107, 127, 94, 0.55);
+  transform: rotate(-16deg);
+}
+
+.cover__decor--leaf-b {
+  bottom: 7%;
+  right: 6%;
+  color: rgba(107, 127, 94, 0.4);
+  transform: rotate(156deg) scale(0.72);
+}
+
+.cover__decor--pencil {
+  top: 15%;
+  right: 9%;
+  opacity: 0.8;
+  transform: rotate(22deg);
+}
+
+.cover__decor--scrap {
+  bottom: 13%;
+  left: 8%;
+  opacity: 0.9;
+  transform: rotate(-7deg);
+}
+
+@media (max-width: 767px) {
+  .cover__decor--pencil {
+    right: -3%;
+    top: 9%;
+    transform: rotate(22deg) scale(0.66);
+    opacity: 0.5;
+  }
+  .cover__decor--scrap {
+    left: -4%;
+    bottom: 9%;
+    transform: rotate(-7deg) scale(0.7);
+    opacity: 0.6;
+  }
+  .cover__decor--leaf {
+    top: 5%;
+    left: -4%;
+    transform: rotate(-16deg) scale(0.6);
+  }
+  .cover__decor--leaf-b {
+    bottom: 4%;
+    right: -5%;
+    transform: rotate(156deg) scale(0.5);
+  }
+  .cover__tagline {
+    letter-spacing: 0.2em;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   2 · About Me
+   -------------------------------------------------------------------------- */
+
+.about {
+  background: var(--color-offwhite);
+}
+
+.about__header {
+  margin-bottom: clamp(30px, 5vw, 54px);
+}
+
+.about__grid {
+  display: grid;
+  gap: clamp(44px, 6vw, 80px);
+}
+
+@media (min-width: 900px) {
+  .about__grid {
+    grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
+    align-items: start;
+  }
+}
+
+/* Portrait stack: backing sheet, print, tape, annotations */
+.portrait {
+  position: relative;
+  margin: 0 auto;
+  padding: 16px;
+  max-width: 460px;
+  transform: rotate(-1.4deg);
+}
+
+.portrait__backing {
+  position: absolute;
+  inset: 4px -14px -16px 16px;
+  background: var(--color-paper);
+  border: 1px solid var(--color-line);
+  box-shadow: var(--shadow-paper);
+  transform: rotate(2.4deg);
+}
+
+.portrait__img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  background: var(--color-paper);
+  border: 1px solid var(--color-line);
+}
+
+.portrait__tape {
+  position: absolute;
+  z-index: 3;
+  width: clamp(96px, 26%, 132px);
+  height: auto;
+}
+
+.portrait__tape--tl {
+  top: -10px;
+  left: -20px;
+  transform: rotate(-24deg);
+}
+
+.portrait__tape--br {
+  bottom: 14px;
+  right: -22px;
+  transform: rotate(-16deg);
+}
+
+.portrait__note {
+  position: absolute;
+  z-index: 4;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  font-family: var(--hand-font);
+  font-size: clamp(1.15rem, 1rem + 0.5vw, 1.5rem);
+  color: var(--color-green-deep);
+  white-space: nowrap;
+}
+
+.portrait__arrow {
+  width: 40px;
+  height: auto;
+  flex: none;
+}
+
+.portrait__note--tl {
+  top: 4%;
+  left: 4%;
+}
+.portrait__note--tl .portrait__arrow {
+  transform: rotate(58deg);
+}
+
+.portrait__note--tr {
+  top: 8%;
+  right: 3%;
+}
+.portrait__note--tr .portrait__arrow {
+  transform: rotate(128deg) scaleX(-1);
+}
+
+.portrait__note--bl {
+  bottom: 15%;
+  left: 4%;
+}
+.portrait__note--bl .portrait__arrow {
+  transform: rotate(12deg);
+}
+
+.portrait__note--br {
+  bottom: 7%;
+  right: 4%;
+}
+.portrait__note--br .portrait__arrow {
+  transform: rotate(196deg);
+}
+
+.portrait__caption {
+  position: relative;
+  z-index: 2;
+  margin-top: 14px;
+  font-size: 0.88rem;
+  font-style: italic;
+  color: rgba(43, 39, 33, 0.62);
+  text-align: center;
+}
+
+@media (max-width: 899px) {
+  .portrait {
+    padding: 12px;
+  }
+  .portrait__note {
+    font-size: 1.15rem;
+  }
+  .portrait__arrow {
+    width: 30px;
+  }
+  .portrait__note--tl {
+    top: 2%;
+    left: 3%;
+  }
+  .portrait__note--tr {
+    top: 2%;
+    right: 3%;
+  }
+  .portrait__note--bl {
+    bottom: 12%;
+  }
+  .portrait__note--br {
+    bottom: 4%;
+  }
+}
+
+/* Biography */
+.about__text {
+  display: flex;
+  flex-direction: column;
+}
+
+.about__bio {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.about__para {
+  max-width: 64ch;
+  color: rgba(43, 39, 33, 0.88);
+}
+
+.about__para:first-of-type::first-letter {
+  font-family: var(--heading-font);
+  font-size: 3.05em;
+  line-height: 0.8;
+  float: left;
+  padding: 0.06em 0.1em 0 0;
+  color: var(--color-green-deep);
+}
+
+.about__creds {
+  margin-top: var(--space-7);
+}
+
+.about__creds-title {
+  font-size: clamp(1.3rem, 1.15rem + 0.6vw, 1.65rem);
+  padding-bottom: var(--space-2);
+  margin-top: var(--space-6);
+  border-bottom: 1px solid var(--color-line);
+}
+
+.about__creds-title:first-child {
+  margin-top: 0;
+}
+
+.cred-list {
+  list-style: none;
+  margin: var(--space-4) 0 var(--space-5);
+  padding: 0;
+  display: grid;
+  gap: var(--space-4);
+}
+
+.cred-list__item {
+  display: grid;
+  grid-template-columns: 118px minmax(0, 1fr);
+  gap: var(--space-4);
+  align-items: baseline;
+}
+
+.cred-list__year {
+  font-size: 0.82rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--color-green-deep);
+}
+
+.cred-list__title {
+  font-family: var(--heading-font);
+  font-size: 1.22rem;
+  letter-spacing: var(--heading-letter-spacing);
+}
+
+.cred-list__org {
+  font-size: 0.95rem;
+  color: rgba(43, 39, 33, 0.72);
+}
+
+.cred-list__desc {
+  font-size: 0.92rem;
+  color: rgba(43, 39, 33, 0.6);
+  margin-top: 2px;
+}
+
+@media (max-width: 640px) {
+  .cred-list__item {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   3 · My Journey — vertical everywhere; horizontal + pinned on wide motion-ok
+       desktops (the media query and the GSAP matchMedia must stay in sync).
+   -------------------------------------------------------------------------- */
+
+.journey {
+  background-color: var(--color-paper);
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0 33px,
+    rgba(43, 39, 33, 0.05) 33px 34px
+  );
+}
+
+.journey__track {
+  max-width: var(--content-max);
+  margin-inline: auto;
+}
+
+.journey__rail {
+  position: relative;
+  padding-left: 34px;
+  margin-top: var(--space-6);
+}
+
+.journey__line {
+  position: absolute;
+  left: 6px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: var(--color-line);
+  border-radius: 2px;
+}
+
+.journey__line-fill {
+  position: absolute;
+  inset: 0;
+  background: var(--color-green-deep);
+  transform-origin: top center;
+}
+
+.journey__nodes {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: clamp(30px, 5vw, 48px);
+}
+
+.journey__node {
+  position: relative;
+}
+
+.journey__dot {
+  position: absolute;
+  left: -34px;
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--color-paper);
+  border: 2px solid var(--color-green-deep);
+}
+
+.journey__year {
+  font-size: 0.82rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-green-deep);
+}
+
+.journey__label {
+  font-size: var(--title-sub);
+  margin: 6px 0 8px;
+}
+
+.journey__desc {
+  max-width: 58ch;
+  color: rgba(43, 39, 33, 0.82);
+  font-size: 0.97em;
+}
+
+@media (min-width: 641px) {
+  .journey__label {
+    font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem);
+  }
+}
+
+/* Wide desktop with motion allowed: pin and travel sideways */
+@media (min-width: 1024px) and (prefers-reduced-motion: no-preference) {
+  .journey {
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    overflow: clip;
+    padding-block: calc(var(--nav-offset) + 8px) var(--space-6);
+  }
+
+  .journey__track {
+    display: flex;
+    align-items: flex-start;
+    gap: clamp(56px, 7vw, 130px);
+    width: max-content;
+    max-width: none;
+    padding-inline: var(--gutter);
+    will-change: transform;
+  }
+
+  .journey__intro {
+    flex: none;
+    width: clamp(300px, 26vw, 420px);
+    padding-top: clamp(0px, 4vh, 64px);
+  }
+
+  .journey__rail {
+    flex: none;
+    padding-left: 0;
+    margin-top: 0;
+  }
+
+  .journey__nodes {
+    display: flex;
+    gap: clamp(44px, 4vw, 84px);
+  }
+
+  .journey__node {
+    width: clamp(300px, 25vw, 390px);
+    padding-top: 48px;
+  }
+
+  .journey__line {
+    left: 0;
+    right: 0;
+    top: 14px;
+    bottom: auto;
+    width: auto;
+    height: 2px;
+  }
+
+  .journey__line-fill {
+    transform-origin: left center;
+  }
+
+  .journey__dot {
+    left: 0;
+    top: 8px;
+  }
+
+  .journey__label {
+    font-size: clamp(1.6rem, 1.2rem + 1.2vw, 2.2rem);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   4 · Teaching Philosophy
+   -------------------------------------------------------------------------- */
+
+.philosophy {
+  background: var(--color-offwhite);
+  overflow: clip;
+  text-align: center;
+}
+
+.philosophy__inner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+}
+
+.philosophy__eyebrow {
+  margin-bottom: 0;
+}
+
+.philosophy__label {
+  font-size: var(--title-section);
+  color: rgba(43, 39, 33, 0.66);
+  letter-spacing: 0.14em;
+}
+
+.philosophy__quote {
+  margin: clamp(22px, 4vh, 44px) 0 0;
+  max-width: 22ch;
+}
+
+.philosophy__quote p {
+  font-family: var(--heading-font);
+  font-size: var(--title-quote);
+  line-height: 1.16;
+  letter-spacing: var(--heading-letter-spacing);
+  text-wrap: balance;
+}
+
+.philosophy__line {
+  display: block;
+}
+
+.philosophy__line + .philosophy__line {
+  color: var(--color-green-deep);
+}
+
+.philosophy__support {
+  max-width: 58ch;
+  margin-top: clamp(24px, 4vh, 40px);
+  color: rgba(43, 39, 33, 0.8);
+}
+
+.philosophy__sign {
+  margin-top: var(--space-5);
+  font-family: var(--hand-font);
+  font-size: 1.4rem;
+  color: var(--color-green-deep);
+}
+
+.philosophy__botanical {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  color: rgba(107, 127, 94, 0.5);
+}
+
+.philosophy__botanical--a {
+  top: 8%;
+  left: 4%;
+  transform: rotate(-18deg);
+}
+
+.philosophy__botanical--b {
+  bottom: 4%;
+  right: 3%;
+  transform: rotate(150deg) scale(1.15);
+  color: rgba(107, 127, 94, 0.34);
+}
+
+.philosophy__botanical--c {
+  top: 14%;
+  right: 12%;
+  transform: rotate(42deg) scale(0.6);
+  color: rgba(166, 123, 91, 0.4);
+}
+
+@media (max-width: 767px) {
+  .philosophy__botanical--b {
+    right: -12%;
+    bottom: -2%;
+    transform: rotate(150deg) scale(0.8);
+  }
+  .philosophy__botanical--a {
+    left: -10%;
+    transform: rotate(-18deg) scale(0.7);
+  }
+  .philosophy__botanical--c {
+    right: -4%;
+    top: 6%;
+    transform: rotate(42deg) scale(0.45);
+  }
+}

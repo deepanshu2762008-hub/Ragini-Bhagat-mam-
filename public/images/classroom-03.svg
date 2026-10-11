@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="Abstract field notes with magnifying glass and leaf specimen">
+  <rect width="800" height="600" fill="#F4EEE3"/>
+
+  <!-- notebook -->
+  <g>
+    <rect x="110" y="70" width="380" height="460" rx="6" fill="#FBF8F2" stroke="rgba(43,39,33,0.3)" stroke-width="3"/>
+    <path d="M170 70 v460" stroke="rgba(166,123,91,0.55)" stroke-width="3"/>
+    <g stroke="rgba(43,39,33,0.22)" stroke-width="2.4">
+      <path d="M140 130 h320 M140 170 h320 M140 210 h320 M140 250 h320 M140 290 h320 M140 330 h320 M140 370 h320 M140 410 h320 M140 450 h260"/>
+    </g>
+    <g stroke="#4A5C40" stroke-width="3.4" fill="none" stroke-linecap="round">
+      <path d="M220 300 C258 268 300 240 356 224"/>
+      <path d="M262 276 C258 254 268 234 288 226 C294 248 284 268 262 276 Z"/>
+      <path d="M312 252 C314 230 330 214 352 212 C352 234 336 250 312 252 Z"/>
+    </g>
+  </g>
+
+  <!-- magnifier -->
+  <g stroke="#2B2721" stroke-width="5" fill="none" stroke-linecap="round">
+    <circle cx="574" cy="240" r="92" fill="rgba(230,220,203,0.45)"/>
+    <path d="M640 306 L708 374"/>
+  </g>
+  <path d="M528 268 C556 236 596 216 636 214" fill="none" stroke="#6B7F5E" stroke-width="4" stroke-linecap="round"/>
+  <path d="M566 258 C560 240 568 224 586 218 C590 236 582 252 566 258 Z" fill="none" stroke="#6B7F5E" stroke-width="4"/>
+
+  <g stroke="rgba(43,39,33,0.4)" stroke-width="3" fill="none" stroke-linecap="round">
+    <path d="M470 500 h180 M470 530 h120"/>
+  </g>
+</svg>

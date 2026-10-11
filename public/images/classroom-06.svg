@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="Abstract stage with lectern and string lights">
+  <rect width="800" height="600" fill="#F4EEE3"/>
+
+  <!-- backdrop -->
+  <rect x="60" y="60" width="680" height="480" fill="#E6DCCB" opacity="0.55"/>
+  <path d="M60 60 q80 60 0 120 M740 60 q-80 60 0 120" fill="#2B2721" opacity="0.55"/>
+  <path d="M60 60 h680" stroke="rgba(43,39,33,0.5)" stroke-width="6"/>
+
+  <!-- string lights -->
+  <g fill="none" stroke="rgba(43,39,33,0.5)" stroke-width="3">
+    <path d="M70 150 C240 230 560 230 730 150"/>
+  </g>
+  <g fill="rgba(166,123,91,0.85)">
+    <circle cx="130" cy="176" r="9"/>
+    <circle cx="230" cy="204" r="9"/>
+    <circle cx="340" cy="216" r="9"/>
+    <circle cx="460" cy="216" r="9"/>
+    <circle cx="570" cy="204" r="9"/>
+    <circle cx="670" cy="176" r="9"/>
+  </g>
+
+  <!-- spotlight pool -->
+  <ellipse cx="400" cy="520" rx="210" ry="42" fill="#FBF8F2" opacity="0.8"/>
+
+  <!-- lectern -->
+  <g stroke="#2B2721" stroke-width="5" fill="#FBF8F2" stroke-linejoin="round">
+    <path d="M330 330 h140 l20 44 h-180 Z"/>
+    <path d="M372 374 h56 v128 h-56 Z"/>
+    <path d="M340 502 h120"/>
+  </g>
+  <path d="M356 344 h88" stroke="rgba(43,39,33,0.5)" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- open book on lectern -->
+  <path d="M348 322 C372 306 428 306 452 322 C436 336 364 336 348 322 Z" fill="#E6DCCB" stroke="#2B2721" stroke-width="3"/>
+
+  <!-- audience dots -->
+  <g fill="rgba(43,39,33,0.35)">
+    <circle cx="150" cy="546" r="14"/>
+    <circle cx="220" cy="556" r="14"/>
+    <circle cx="580" cy="556" r="14"/>
+    <circle cx="650" cy="546" r="14"/>
+  </g>
+</svg>

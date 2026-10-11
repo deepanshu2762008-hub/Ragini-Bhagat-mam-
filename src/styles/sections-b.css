@@ -1,0 +1,518 @@
+/* ==========================================================================
+   SECTIONS 5–8 — Subjects · Inside the Classroom · Achievements · Selected Work
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   5 · Subjects & Expertise — editorial rows, never cards
+   -------------------------------------------------------------------------- */
+
+.subjects {
+  background: var(--color-paper);
+}
+
+.subjects__header {
+  max-width: 74ch;
+  margin-bottom: clamp(26px, 4vw, 46px);
+}
+
+.subjects__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--color-line);
+}
+
+.subjects__list > li {
+  border-bottom: 1px solid var(--color-line);
+}
+
+.subject {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 54px minmax(0, 1fr);
+  gap: clamp(12px, 3vw, 30px);
+  align-items: center;
+  text-align: left;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  min-height: 44px;
+  padding: clamp(18px, 2.4vw, 26px) 4px;
+  padding-right: clamp(140px, 17vw, 230px);
+  transition:
+    transform var(--dur-1) var(--ease),
+    background-color var(--dur-1) var(--ease);
+}
+
+.subject:hover {
+  transform: translateX(8px);
+}
+
+.subject:active {
+  transform: translateX(4px);
+}
+
+.subject__index {
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  color: rgba(43, 39, 33, 0.45);
+  align-self: start;
+  padding-top: 0.7em;
+}
+
+.subject__body {
+  display: grid;
+  gap: 6px;
+}
+
+.subject__name {
+  font-family: var(--heading-font);
+  font-size: clamp(1.55rem, 1.1rem + 1.7vw, 2.5rem);
+  line-height: 1.08;
+  letter-spacing: var(--heading-letter-spacing);
+  transition: color var(--dur-1) var(--ease);
+}
+
+.subject:hover .subject__name,
+.subject:focus-visible .subject__name,
+.subject.is-open .subject__name {
+  color: var(--color-green-deep);
+}
+
+.subject__desc {
+  color: rgba(43, 39, 33, 0.72);
+  font-size: 0.95em;
+  max-width: 60ch;
+}
+
+.subject__art {
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  width: clamp(110px, 15vw, 186px);
+  color: var(--color-green-deep);
+  opacity: 0;
+  transform: translateY(-50%) translateX(-16px) rotate(-4deg);
+  transition:
+    opacity var(--dur-2) var(--ease),
+    transform var(--dur-2) var(--ease);
+}
+
+.subject:hover .subject__art,
+.subject:focus-visible .subject__art,
+.subject.is-open .subject__art {
+  opacity: 1;
+  transform: translateY(-50%);
+}
+
+@media (max-width: 767px) {
+  .subject {
+    grid-template-columns: minmax(0, 1fr);
+    padding-right: 106px;
+    gap: 4px;
+  }
+  .subject__index {
+    padding-top: 0;
+  }
+  .subject__art {
+    width: 96px;
+    right: 0;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   6 · Inside the Classroom — scrapbook masonry
+   -------------------------------------------------------------------------- */
+
+.classroom {
+  background: var(--color-beige);
+}
+
+.classroom__header {
+  max-width: 74ch;
+}
+
+.gallery {
+  columns: 1;
+  column-gap: clamp(16px, 2.4vw, 30px);
+  margin-top: clamp(28px, 4vw, 52px);
+}
+
+@media (min-width: 641px) {
+  .gallery {
+    columns: 2;
+  }
+}
+
+@media (min-width: 1000px) {
+  .gallery {
+    columns: 3;
+  }
+}
+
+.gallery__item {
+  break-inside: avoid;
+  margin: 0 0 clamp(20px, 2.8vw, 36px);
+  transform: rotate(var(--tilt, 0deg));
+  transition: opacity var(--dur-2) var(--ease);
+}
+
+.gallery__btn {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  background: var(--color-paper);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-paper);
+  cursor: pointer;
+  transition:
+    transform var(--dur-2) var(--ease),
+    box-shadow var(--dur-2) var(--ease);
+}
+
+.gallery__btn:hover,
+.gallery__btn:focus-visible {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-paper-hover);
+  z-index: 2;
+}
+
+.gallery__btn:active {
+  transform: scale(1);
+}
+
+.gallery__img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+}
+
+.gallery__item--lg .gallery__img {
+  aspect-ratio: 4 / 5;
+}
+.gallery__item--md .gallery__img {
+  aspect-ratio: 4 / 3;
+}
+.gallery__item--sm .gallery__img {
+  aspect-ratio: 1 / 1;
+}
+
+/* Tape mount */
+.gallery__tape {
+  position: absolute;
+  top: -11px;
+  left: 50%;
+  width: clamp(70px, 30%, 108px);
+  height: 24px;
+  transform: translateX(-50%) rotate(-2deg);
+  background: rgba(251, 248, 242, 0.72);
+  border-top: 1px solid rgba(43, 39, 33, 0.08);
+  border-bottom: 1px solid rgba(43, 39, 33, 0.08);
+  box-shadow: 0 1px 2px rgba(43, 39, 33, 0.08);
+  clip-path: polygon(4% 0, 96% 6%, 100% 94%, 92% 100%, 6% 95%, 0 8%);
+}
+
+.gallery__caption {
+  margin-top: 12px;
+  padding-inline: 4px;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: rgba(43, 39, 33, 0.66);
+  transition:
+    opacity var(--dur-1) var(--ease),
+    transform var(--dur-1) var(--ease);
+}
+
+@media (hover: hover) {
+  .gallery:hover .gallery__item:not(:hover) {
+    opacity: 0.5;
+  }
+  .gallery__caption {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  .gallery__item:hover .gallery__caption,
+  .gallery__item:focus-within .gallery__caption {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.classroom__hint {
+  margin-top: var(--space-5);
+  font-family: var(--hand-font);
+  font-size: 1.3rem;
+  color: var(--color-green-deep);
+}
+
+/* --------------------------------------------------------------------------
+   7 · Achievements — counters + notebook index page
+   -------------------------------------------------------------------------- */
+
+.achievements {
+  background: var(--color-paper);
+}
+
+.achievements__header {
+  max-width: 74ch;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: clamp(22px, 4vw, 46px);
+  margin: clamp(30px, 5vw, 56px) 0 clamp(40px, 6vw, 74px);
+  padding: clamp(26px, 4vw, 44px) 0;
+  border-top: 1px solid var(--color-line);
+  border-bottom: 1px solid var(--color-line);
+}
+
+.stat__value {
+  font-family: var(--heading-font);
+  font-size: clamp(2.9rem, 2rem + 3.6vw, 5rem);
+  line-height: 1;
+  color: var(--color-green-deep);
+}
+
+.stat__label {
+  margin-top: 8px;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  color: rgba(43, 39, 33, 0.72);
+}
+
+.index-page {
+  columns: 1;
+  column-gap: clamp(32px, 5vw, 72px);
+}
+
+@media (min-width: 900px) {
+  .index-page {
+    columns: 2;
+  }
+}
+
+.index-group {
+  break-inside: avoid;
+  margin-bottom: clamp(26px, 4vw, 42px);
+}
+
+.index-group__title {
+  font-family: var(--heading-font);
+  font-size: clamp(1.4rem, 1.2rem + 0.8vw, 1.85rem);
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--color-line);
+  color: var(--color-green-deep);
+}
+
+.index-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 15px;
+}
+
+.index-list__row {
+  display: grid;
+  grid-template-columns: auto minmax(20px, 1fr) auto;
+  align-items: baseline;
+  column-gap: 10px;
+}
+
+.index-list__title {
+  font-size: 1rem;
+}
+
+.index-list__leader {
+  border-bottom: 1px dotted rgba(43, 39, 33, 0.42);
+  transform: translateY(-5px);
+}
+
+.index-list__year {
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  color: var(--color-green-deep);
+  white-space: nowrap;
+}
+
+.index-list__desc {
+  font-size: 0.88rem;
+  color: rgba(43, 39, 33, 0.6);
+  margin-top: 3px;
+}
+
+/* --------------------------------------------------------------------------
+   8 · Selected Work — vertical stack; pinned horizontal pages on motion-ok
+       wide desktops (keep this media query in sync with the GSAP matchMedia).
+   -------------------------------------------------------------------------- */
+
+.work {
+  background: var(--color-offwhite);
+}
+
+.work__track {
+  display: grid;
+  gap: clamp(28px, 4vw, 46px);
+  max-width: var(--content-max);
+  margin-inline: auto;
+}
+
+.work__intro {
+  max-width: 62ch;
+}
+
+.work__hint {
+  display: none;
+  font-family: var(--hand-font);
+  font-size: 1.25rem;
+  color: var(--color-green-deep);
+  margin-top: 18px;
+}
+
+.work__page {
+  transform: rotate(-0.45deg);
+}
+
+.work__page:nth-of-type(even) {
+  transform: rotate(0.5deg);
+}
+
+.work__sheet {
+  display: grid;
+  gap: var(--space-4);
+  background: var(--color-paper);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-paper);
+  padding: clamp(22px, 3vw, 42px);
+}
+
+.work__meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--color-line);
+}
+
+.work__num {
+  font-family: var(--heading-font);
+  font-size: 1.5rem;
+  color: var(--color-green-deep);
+}
+
+.work__year {
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(43, 39, 33, 0.6);
+}
+
+.work__name {
+  font-size: clamp(1.7rem, 1.3rem + 1.6vw, 2.6rem);
+  line-height: 1.08;
+}
+
+.work__role {
+  font-size: 0.9rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(43, 39, 33, 0.66);
+  margin-top: -8px;
+}
+
+.work__desc {
+  color: rgba(43, 39, 33, 0.84);
+  max-width: 66ch;
+}
+
+.work__images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(10px, 1.6vw, 18px);
+}
+
+.work__img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background: var(--color-offwhite);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-sm);
+}
+
+.work__open {
+  justify-self: start;
+  min-height: 44px;
+  padding: 10px 22px;
+  background: transparent;
+  border: 1px solid var(--color-ink);
+  border-radius: var(--radius-sm);
+  font-size: 0.82rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    background var(--dur-1) var(--ease),
+    color var(--dur-1) var(--ease),
+    transform var(--dur-1) var(--ease);
+}
+
+.work__open:hover {
+  background: var(--color-ink);
+  color: var(--color-offwhite);
+  transform: translateY(-2px);
+}
+
+.work__open:active {
+  transform: translateY(0);
+}
+
+@media (min-width: 1024px) and (prefers-reduced-motion: no-preference) {
+  .work {
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    padding-block: calc(var(--nav-offset) + 8px) var(--space-6);
+  }
+
+  .work__track {
+    display: flex;
+    align-items: center;
+    gap: clamp(40px, 4vw, 76px);
+    width: max-content;
+    max-width: none;
+    padding-inline: var(--gutter);
+    will-change: transform;
+  }
+
+  .work__intro {
+    flex: none;
+    width: clamp(300px, 26vw, 430px);
+    max-width: none;
+  }
+
+  .work__hint {
+    display: block;
+  }
+
+  .work__page {
+    flex: none;
+    width: clamp(560px, 60vw, 880px);
+    display: flex;
+    align-items: center;
+  }
+
+  .work__sheet {
+    width: 100%;
+  }
+}

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="Abstract index cards and pencil on a desk">
+  <rect width="800" height="600" fill="#FBF8F2"/>
+  <rect x="26" y="26" width="748" height="548" fill="none" stroke="rgba(43,39,33,0.16)" stroke-width="2"/>
+
+  <!-- index cards -->
+  <g stroke="rgba(43,39,33,0.32)" stroke-width="3">
+    <rect x="90" y="100" width="230" height="150" fill="#F4EEE3" transform="rotate(-3 205 175)"/>
+    <rect x="350" y="86" width="230" height="150" fill="#E6DCCB" transform="rotate(2 465 161)"/>
+    <rect x="140" y="300" width="230" height="150" fill="#E6DCCB" transform="rotate(1.5 255 375)"/>
+    <rect x="420" y="320" width="230" height="150" fill="#F4EEE3" transform="rotate(-2 535 395)"/>
+  </g>
+
+  <!-- scribbled plans -->
+  <g stroke="rgba(43,39,33,0.4)" stroke-width="3" fill="none" stroke-linecap="round">
+    <path d="M116 150 h150 M116 180 h170 M116 210 h120" transform="rotate(-3 205 175)"/>
+    <path d="M376 136 h160 M376 166 h130 M376 196 h150" transform="rotate(2 465 161)"/>
+    <path d="M166 350 h160 M166 380 h120 M166 410 h150" transform="rotate(1.5 255 375)"/>
+    <path d="M446 370 h150 M446 400 h170 M446 430 h110" transform="rotate(-2 535 395)"/>
+  </g>
+  <g fill="none" stroke="#6B7F5E" stroke-width="4" stroke-linecap="round">
+    <path d="M110 140 l14 14 l24 -30" transform="rotate(-3 205 175)"/>
+    <path d="M370 130 l14 14 l24 -30" transform="rotate(2 465 161)"/>
+  </g>
+
+  <!-- pencil -->
+  <g transform="rotate(36 640 470)">
+    <rect x="560" y="452" width="200" height="26" rx="4" fill="#E6DCCB" stroke="#2B2721" stroke-width="3"/>
+    <path d="M760 452 l34 13 l-34 13 Z" fill="#F4EEE3" stroke="#2B2721" stroke-width="3"/>
+    <path d="M784 461 l10 4 l-10 4 Z" fill="#2B2721"/>
+    <rect x="560" y="452" width="24" height="26" fill="rgba(166,123,91,0.8)" stroke="#2B2721" stroke-width="3"/>
+  </g>
+</svg>

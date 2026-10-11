@@ -1,0 +1,73 @@
+/* ==========================================================================
+   PRINT — the sketchbook on paper: calm, black on white, no chrome.
+   ========================================================================== */
+
+@media print {
+  body {
+    background: #fff;
+    color: #000;
+    font-size: 11pt;
+    line-height: 1.5;
+  }
+
+  /* No grain, chrome or decoration */
+  body::after,
+  .site-header,
+  .progress,
+  .skip-link,
+  .cover__noise,
+  .cover__cta,
+  .cover__decor,
+  .torn,
+  .decor,
+  .work__hint,
+  .signature__top,
+  .cert__actions,
+  .copy-btn,
+  .classroom__hint,
+  .personal__note,
+  .ahead__ghost,
+  .ahead__grain,
+  .ahead__leaf,
+  .impact__mark {
+    display: none !important;
+  }
+
+  .section {
+    padding: 16pt 0;
+    page-break-inside: avoid;
+    background: #fff !important;
+    background-image: none !important;
+    min-height: auto;
+  }
+
+  .section--screen {
+    min-height: auto;
+    display: block;
+  }
+
+  .js .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .testimonial {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .ahead {
+    color: #000;
+  }
+
+  a[href^='http']::after {
+    content: ' (' attr(href) ')';
+    font-size: 0.85em;
+    color: #444;
+    word-break: break-all;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+}

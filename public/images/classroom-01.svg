@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="Abstract classroom window with morning light and a plant">
+  <rect width="800" height="600" fill="#F4EEE3"/>
+
+  <!-- light -->
+  <path d="M300 90 L560 90 L720 600 L430 600 Z" fill="#FBF8F2" opacity="0.75"/>
+
+  <!-- window -->
+  <g stroke="#2B2721" stroke-width="5" fill="none" stroke-linecap="round">
+    <rect x="180" y="70" width="400" height="330"/>
+    <path d="M380 70 v330 M180 235 h400"/>
+  </g>
+  <g fill="#E6DCCB" opacity="0.65">
+    <rect x="186" y="76" width="188" height="153"/>
+    <rect x="386" y="241" width="188" height="153"/>
+  </g>
+  <circle cx="486" cy="150" r="42" fill="rgba(166,123,91,0.5)"/>
+
+  <!-- sill + plant -->
+  <path d="M150 400 h460" stroke="#2B2721" stroke-width="6" stroke-linecap="round"/>
+  <g stroke="#4A5C40" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M600 400 h72 l-10 76 h-52 Z"/>
+    <path d="M636 400 C634 356 640 322 656 292"/>
+    <path d="M650 322 C622 318 604 300 600 274 C628 276 648 294 652 320 Z"/>
+    <path d="M644 352 C672 344 690 324 694 300 C666 302 648 322 644 350 Z"/>
+  </g>
+
+  <!-- desk line -->
+  <path d="M60 520 h680" stroke="rgba(43,39,33,0.35)" stroke-width="4" stroke-linecap="round"/>
+  <g stroke="rgba(43,39,33,0.25)" stroke-width="3" fill="none">
+    <path d="M80 560 h160 M80 580 h96"/>
+  </g>
+</svg>

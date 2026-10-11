@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="Abstract magazine proofs pinned to a board">
+  <rect width="800" height="600" fill="#E6DCCB"/>
+  <rect x="30" y="30" width="740" height="540" fill="#F4EEE3" stroke="rgba(43,39,33,0.2)" stroke-width="3"/>
+
+  <!-- proofs -->
+  <g stroke="rgba(43,39,33,0.35)" stroke-width="3">
+    <rect x="80" y="90" width="280" height="200" fill="#FBF8F2" transform="rotate(-2 220 190)"/>
+    <rect x="400" y="80" width="300" height="210" fill="#FBF8F2" transform="rotate(1.5 550 185)"/>
+    <rect x="140" y="330" width="300" height="190" fill="#FBF8F2" transform="rotate(1 290 425)"/>
+    <rect x="480" y="340" width="230" height="180" fill="#FBF8F2" transform="rotate(-1.5 595 430)"/>
+  </g>
+
+  <!-- content lines -->
+  <g stroke="rgba(43,39,33,0.28)" stroke-width="3" fill="none" stroke-linecap="round">
+    <path d="M110 140 h180 M110 170 h210 M110 200 h150 M110 230 h190"/>
+    <path d="M430 130 h200 M430 160 h230 M430 190 h170 M430 220 h210"/>
+    <path d="M170 380 h220 M170 410 h180 M170 440 h210"/>
+    <path d="M510 390 h160 M510 420 h140 M510 450 h170"/>
+  </g>
+  <g fill="none" stroke="#4A5C40" stroke-width="3.4">
+    <path d="M430 130 v0"/>
+    <rect x="430" y="96" width="90" height="26" fill="rgba(107,127,94,0.4)" stroke="none"/>
+    <path d="M110 106 h70" stroke="#A67B5B" stroke-width="8" stroke-linecap="round"/>
+  </g>
+
+  <!-- pins -->
+  <g fill="#A67B5B" stroke="rgba(43,39,33,0.4)" stroke-width="2">
+    <circle cx="220" cy="96" r="9"/>
+    <circle cx="550" cy="88" r="9"/>
+    <circle cx="290" cy="338" r="9"/>
+    <circle cx="595" cy="348" r="9"/>
+  </g>
+</svg>
