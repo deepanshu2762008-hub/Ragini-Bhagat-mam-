@@ -34,7 +34,7 @@ export default function About() {
               height="900"
               loading="lazy"
               decoding="async"
-              alt={`Illustrated portrait of ${teacherName} surrounded by botanical line art`}
+              alt={`Portrait photograph of ${teacherName}`}
             />
             <TapeStrip className="portrait__tape portrait__tape--tl" />
             <TapeStrip className="portrait__tape portrait__tape--br" />
@@ -47,7 +47,7 @@ export default function About() {
             ))}
 
             <figcaption className="portrait__caption">
-              {teacherName} — sketched between lessons
+              {teacherName} — photographed between lessons
             </figcaption>
           </figure>
 

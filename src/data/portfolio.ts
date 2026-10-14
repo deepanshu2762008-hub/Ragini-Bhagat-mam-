@@ -46,7 +46,7 @@ export const bio: string[] = [
   'Outside the lesson plan I mentor new teachers, chair curriculum committees, and keep a battered sketchbook of ideas that did not work yet. I am, and expect to remain, a student of teaching itself.',
 ];
 
-export const portraitImage = '/images/portrait.svg';
+export const portraitImage = '/images/portrait.jpg';
 
 /* ------------------------------ education ------------------------------- */
 
@@ -346,32 +346,32 @@ export const projects: Project[] = [
 
 export const gallery: GalleryItem[] = [
   {
-    image: '/images/classroom-01.svg',
-    caption: 'Morning light, before the first bell',
+    image: '/images/photo-01.jpg',
+    caption: 'A holiday afternoon in the hills',
     rotation: -1.6,
     size: 'lg',
-    alt: 'Abstract illustration of a classroom window with morning light and a plant on the sill',
+    alt: `Photograph of ${teacherName} in a red embroidered suit with mountains and a sunset behind her`,
   },
   {
-    image: '/images/classroom-02.svg',
-    caption: 'Reading corner, mid-chapter',
+    image: '/images/photo-02.jpg',
+    caption: 'Flash on at the evening function',
     rotation: 1.2,
     size: 'md',
-    alt: 'Abstract illustration of a stack of books beside a reading chair',
+    alt: `Flash-lit candid of ${teacherName} in sunglasses and a cream saree at an evening event`,
   },
   {
-    image: '/images/classroom-03.svg',
-    caption: 'Notes from the field — outside the classroom walls',
+    image: '/images/photo-03.jpg',
+    caption: 'OCT 13 1985 — pulled from the old album',
     rotation: -0.8,
     size: 'md',
-    alt: 'Abstract illustration of field notes and a magnifying glass on paper',
+    alt: `Vintage 1985 photograph of ${teacherName} in a pink silk saree`,
   },
   {
-    image: '/images/classroom-04.svg',
-    caption: 'Proofs of the second issue, spread across the desk',
+    image: '/images/photo-04.jpg',
+    caption: 'Retro shades, film grain and all',
     rotation: 1.8,
     size: 'sm',
-    alt: 'Abstract illustration of magazine proofs pinned to a board',
+    alt: `Retro-filtered candid of ${teacherName} in sunglasses and a printed cream saree`,
   },
   {
     image: '/images/classroom-05.svg',
@@ -533,5 +533,5 @@ export const seoMeta: SeoMeta = {
   title: 'Ragini Bhagat — Educator • Mentor • Lifelong Learner',
   description:
     'A digital sketchbook documenting the professional journey of Ragini Bhagat: teaching philosophy, classroom work, achievements and the road ahead.',
-  ogImage: '/images/portrait.svg',
+  ogImage: '/images/portrait.jpg',
 };
